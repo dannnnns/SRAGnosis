@@ -1,0 +1,13 @@
+# Ignorar dados (segurança e performance)
+data/
+outputs/*.csv
+
+# Ignorar arquivos temporários do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar pastas ocultas do Jupyter e Colab
+.ipynb_checkpoints/
+.virtualenv/
+venv/
