@@ -1,0 +1,26 @@
+# Dicionário de Dados - Projeto SRAGnosis
+
+Este dicionário foi elaborado com base no documento oficial do Sistema de Informação de Vigilância Epidemiológica da Gripe (SIVEP-Gripe) do Ministério da Saúde (v. 23/03/2021).
+
+## Variáveis Utilizadas no Modelo Preditivo
+
+| Variável (Código Python) | Nome no DBF | Descrição Técnica | Categorias / Valores |
+| :--- | :--- | :--- | :--- |
+| **PERD_OLFT** | PERD_OLFT | Paciente apresentou perda do olfato? | 1-Sim; 2-Não; 9-Ignorado |
+| **PERD_PALA** | PERD_PALA | Paciente apresentou perda do paladar? | 1-Sim; 2-Não; 9-Ignorado |
+| **FEBRE** | FEBRE | Paciente apresentou febre? | 1-Sim; 2-Não; 9-Ignorado |
+| **TOSSE** | TOSSE | Paciente apresentou tosse? | 1-Sim; 2-Não; 9-Ignorado |
+| **SATURACAO** | SATURACAO | Paciente apresentou saturação O2 < 95%? | 1-Sim; 2-Não; 9-Ignorado |
+| **UTI** | UTI | Paciente foi internado em UTI? | 1-Sim; 2-Não; 9-Ignorado |
+| **SUPORT_VEN** | SUPORT_VEN | Uso de suporte ventilatório? | 1-Sim, invasivo; 2-Sim, não invasivo; 3-Não; 9-Ignorado |
+| **RAIOX_RES** | RAIOX_RES | Resultado do Raio X de Tórax | 1-Normal; 2-Infiltrado; 3-Consolidação; 4-Misto; 5-Outro; 6-Não realizado |
+| **TOMO_RES** | TOMO_RES | Aspecto da Tomografia | 1-Típico COVID-19; 2-Indeterminado; 3-Atípico; 4-Negativo; 5-Outro; 6-Não realizado |
+| **POSSUI_MORBIDADE**| FATOR_RISC | Paciente apresenta algum fator de risco? | 1-Sim; 2-Não; 9-Ignorado |
+| **VACINAS** | VACINA_COV | Recebeu vacina contra COVID-19? | 1-Sim; 2-Não; 9-Ignorado |
+| **CLASSI_FIN** (label) | CLASSI_FIN | Diagnóstico final do caso | 1-Influenza; 2-Outro vírus; 3-Outro agente; 4-Não especificado; 5-COVID-19 |
+| **EVOLUCAO** | EVOLUCAO | Desfecho clínico do caso | 1-Cura; 2-Óbito; 3-Óbito por outras causas; 9-Ignorado |
+| **DIST_PRI_INTERN** | - | Variável calculada: dias entre 1ºs sintomas e internação | Valor Numérico (Dias) |
+
+---
+[cite_start]**Fonte dos Metadados:** [cite: 1, 3, 5, 6]
+Ministério da Saúde - SIVEP-Gripe. [cite_start]Dicionário de Dados: Ficha de Registro Individual de Casos de SRAG Hospitalizados. [cite: 4, 13]
