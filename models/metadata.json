@@ -1,0 +1,92 @@
+{
+  "model_name": "SRAGnosis admission-only decision tree",
+  "version": "0.2.0-research",
+  "outcome": "Classificação binária de COVID-19 entre registros de SRAG",
+  "features": [
+    "PERD_OLFT",
+    "PERD_PALA",
+    "FEBRE",
+    "SATURACAO",
+    "FADIGA",
+    "TOSSE",
+    "GARGANTA",
+    "CS_SEXO",
+    "DIST_PRI_INTERN",
+    "POSSUI_MORBIDADE",
+    "FAIXA_ETARIA",
+    "VACINAS"
+  ],
+  "training_period": "2020–2021",
+  "validation_period": "2022",
+  "test_period": "2023",
+  "training_n": 225825,
+  "validation_n": 62433,
+  "test_n": 24317,
+  "screening_threshold": 0.2743494885470126,
+  "hyperparameters": {
+    "criterion": "entropy",
+    "max_depth": 8,
+    "min_samples_leaf": 100,
+    "class_weight": "balanced",
+    "random_state": 1
+  },
+  "feature_importance": {
+    "FAIXA_ETARIA": 0.6328273614149184,
+    "DIST_PRI_INTERN": 0.2077611797246755,
+    "VACINAS": 0.06485258399544416,
+    "PERD_OLFT": 0.027865499666085154,
+    "TOSSE": 0.025845444220196485,
+    "POSSUI_MORBIDADE": 0.010321951683635899,
+    "PERD_PALA": 0.010002364483203272,
+    "SATURACAO": 0.009639846717206156,
+    "FEBRE": 0.007590203373777205,
+    "FADIGA": 0.0023387508663353903,
+    "GARGANTA": 0.0007666842772104831,
+    "CS_SEXO": 0.00018812957731184396
+  },
+  "validation_2022": {
+    "n": 62433,
+    "prevalence": 0.21908285682251374,
+    "threshold": 0.2743494885470126,
+    "accuracy": 0.7145259718418144,
+    "balanced_accuracy": 0.7686695126248501,
+    "sensitivity": 0.8650387483550227,
+    "specificity": 0.6723002768946774,
+    "ppv": 0.4254737674853465,
+    "npv": 0.9466843807763401,
+    "roc_auc": 0.8198821469025286,
+    "pr_auc": 0.4936429135706575,
+    "confusion": {
+      "tn": 32778,
+      "fp": 15977,
+      "fn": 1846,
+      "tp": 11832
+    }
+  },
+  "test_2023": {
+    "n": 24317,
+    "prevalence": 0.021425340296911625,
+    "threshold": 0.2743494885470126,
+    "accuracy": 0.7704897808117778,
+    "balanced_accuracy": 0.780416166977853,
+    "sensitivity": 0.7907869481765835,
+    "specificity": 0.7700453857791225,
+    "ppv": 0.07002039428959891,
+    "npv": 0.9940866923452504,
+    "roc_auc": 0.8213285414829634,
+    "pr_auc": 0.0749350240714344,
+    "confusion": {
+      "tn": 18324,
+      "fp": 5472,
+      "fn": 109,
+      "tp": 412
+    }
+  },
+  "limitations": [
+    "Protótipo retrospectivo, sem validação clínica prospectiva ou externa.",
+    "O escore da árvore não é uma probabilidade clínica calibrada.",
+    "A prevalência e o perfil dos casos mudaram intensamente entre 2020 e 2023.",
+    "Os rótulos das categorias reconstruídas precisam ser conferidos no pré-processamento original.",
+    "Não utilizar para diagnóstico, exclusão de doença ou decisão terapêutica."
+  ]
+}
